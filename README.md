@@ -54,12 +54,3 @@ Carte de test : `4242 4242 4242 4242`.
 
 Le détail de chaque écran, des variables et de ce qui manquait dans le PDF est dans le README de chaque projet.
 
-## Ce que le PDF ne contient pas
-
-- Le code complet : seulement des extraits, parfois coupés (`{...}`, `data: { ... }`, `user.id` sans requête).
-- `GUIDE_COMPLET.md`, annoncé comme le guide ligne par ligne.
-- Les variantes `paiement-stripe-2/` et `stripe-subscription-recurrent-starter/`, citées sans structure ni code. Elles n'ont pas été créées.
-- Le catalogue de produits, les images, l'écran d'inscription, le taux de réduction premium, les versions de paquets, et le moyen d'installer MySQL.
-- Des `priceId` d'exemple liés à un compte Stripe tiers. Il faut créer les vôtres.
-
-Les exercices (portail de facturation, coupons, essai de 7 jours, casquette à 19,99 €) restent à faire : le PDF dit que les solutions sont dans `GUIDE_COMPLET.md`, absent de ce dossier.
