@@ -1,0 +1,20 @@
+# MySQL local. Le PDF impose Prisma + MySQL mais ne décrit pas l'installation du serveur.
+# Identifiants de développement uniquement. À changer hors de votre machine.
+services:
+  db:
+    image: mysql:8.4
+    container_name: paiement-stripe-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: paiement_stripe
+      MYSQL_USER: stripe
+      MYSQL_PASSWORD: stripe
+    ports:
+      - "3306:3306"
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-ustripe", "-pstripe"]
+      interval: 5s
+      timeout: 5s
+      retries: 20

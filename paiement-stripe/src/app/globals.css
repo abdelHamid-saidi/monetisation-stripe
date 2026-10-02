@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#f3eee4] text-[#1b2430];
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full bg-[#0f766e] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#115e59] disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center rounded-full border border-[#1b2430]/15 bg-white px-4 py-2 text-sm font-semibold text-[#1b2430] transition hover:bg-[#1b2430]/5;
+}
+
+.card {
+  @apply rounded-3xl border border-[#1b2430]/10 bg-white p-6 shadow-[0_12px_40px_rgba(27,36,48,0.06)];
+}
+
+.field {
+  @apply w-full rounded-xl border border-[#1b2430]/15 bg-white px-3 py-2.5 text-sm outline-none ring-[#0f766e] focus:ring-2;
+}

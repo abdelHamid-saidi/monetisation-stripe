@@ -1,0 +1,19 @@
+# MySQL local pour ce projet seul. Identifiants de développement, pas des secrets de production.
+services:
+  db:
+    image: mysql:8.4
+    container_name: stripe-subscription-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: stripe_subscription
+      MYSQL_USER: stripe
+      MYSQL_PASSWORD: stripe
+    ports:
+      - "3307:3306"
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-ustripe", "-pstripe"]
+      interval: 5s
+      timeout: 5s
+      retries: 20

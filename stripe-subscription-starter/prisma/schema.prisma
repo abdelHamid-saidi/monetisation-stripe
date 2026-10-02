@@ -1,0 +1,31 @@
+// Schéma du cas pratique « abonnement ».
+// Le PDF abrège la relation User avec @relation(...).
+// Elle est complétée ici. Le champ password stocke un hash bcrypt :
+// le guide ne précise pas l'algorithme.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               String         @id @default(cuid())
+  email            String         @unique
+  password         String
+  stripeCustomerId String?        @unique
+  stripePriceId    String?
+  subscriptions    Subscription[]
+}
+
+model Subscription {
+  id                     String    @id @default(cuid())
+  userId                 String
+  user                   User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  stripeSubscriptionId   String    @unique
+  stripePriceId          String
+  stripeCurrentPeriodEnd DateTime?
+}

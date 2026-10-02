@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Stickers">
+  <rect width="640" height="360" fill="#e7d7a8"/>
+  <circle cx="230" cy="160" r="70" fill="#0f766e"/>
+  <rect x="320" y="100" width="130" height="130" rx="24" fill="#143d3a" transform="rotate(12 385 165)"/>
+  <circle cx="400" cy="250" r="42" fill="#c46b3a"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="T-shirt">
+  <rect width="640" height="360" fill="#143d3a"/>
+  <path d="M220 90l100-28 100 28 70 48-48 36-22-16v150H220V158l-22 16-48-36z" fill="#f3eee4"/>
+  <path d="M300 78h40l18 28H282z" fill="#0f766e"/>
+</svg>
